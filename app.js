@@ -12,5 +12,18 @@ mySamuraiApp.run(function(){
 mySamuraiApp.controller("SamuraiController", ['$scope', function($scope){
 
     $scope.message = "hey";
-    $scope.samurais = ['kaname', 'haruka', 'rido']
+    $scope.samurais = [
+        {
+            name: "Kaname",
+            status: "rhonin"
+        },
+        {
+            name: "Haruka",
+            status: "samurai"
+        },
+        {
+            name: "Rido",
+            status: "rhonin"
+        }
+    ];
 }]);
