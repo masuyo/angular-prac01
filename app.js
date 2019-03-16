@@ -15,15 +15,18 @@ mySamuraiApp.controller("SamuraiController", ['$scope', function($scope){
     $scope.samurais = [
         {
             name: "Kaname",
-            status: "rhonin"
+            status: "rhonin",
+            rate: 50
         },
         {
             name: "Haruka",
-            status: "samurai"
+            status: "samurai",
+            rate: 10
         },
         {
             name: "Rido",
-            status: "rhonin"
+            status: "rhonin",
+            rate: 55
         }
     ];
 }]);

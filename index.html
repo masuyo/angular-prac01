@@ -12,7 +12,9 @@
     <div ng-controller="SamuraiController">
         <input type="text" ng-model="search"/>
         <ul>
-            <li ng-repeat="samurai in samurais | orderBy: '-name' | filter: search">{{samurai.name}}</li>
+            <li ng-repeat="samurai in samurais | orderBy: '-name' | filter: search">
+                {{samurai.name}} - {{samurai.rate | currency}}
+            </li>
         </ul>
     </div>
 </body>
