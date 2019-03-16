@@ -7,9 +7,10 @@
     <link href="content\css\style.css" rel="stylesheet" type="text/css" />
     <script src="node_modules\angular\angular.min.js"></script>
 </head>
-<body ng-init="color='orange'">
+<body ng-init="samurais=['kaname', 'haruka', 'ryu']">
     <input type="text" ng-model="favFruit" placeholder="enter your fav fruit"></input>
-    <p class={{color}}>hello</p>
- 
+    <ul>
+        <li ng-repeat="samurai in samurais">{{samurai}}</li>
+    </ul>
 </body>
 </html>
