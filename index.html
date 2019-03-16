@@ -6,11 +6,14 @@
     <title>Page Title</title>
     <link href="content\css\style.css" rel="stylesheet" type="text/css" />
     <script src="node_modules\angular\angular.min.js"></script>
+    <script src="app.js"></script>
 </head>
-<body ng-init="samurais=['kaname', 'haruka', 'ryu']">
-    <input type="text" ng-model="favFruit" placeholder="enter your fav fruit"></input>
-    <ul>
-        <li ng-repeat="samurai in samurais">{{samurai}}</li>
-    </ul>
+<body>
+    <div ng-controller="SamuraiController">
+        <p>{{message}}</p>
+        <ul>
+            <li ng-repeat="samurai in samurais">{{samurai}}</li>
+        </ul>
+    </div>
 </body>
 </html>
