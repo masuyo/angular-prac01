@@ -10,13 +10,15 @@
 </head>
 <body>
     <header ng-include="'header.html'"></header>
-    <div ng-controller="SamuraiController">
-        <input type="text" ng-model="search"/>
-        <ul>
-            <li ng-repeat="samurai in samurais | orderBy: '-name' | filter: search">
-                {{samurai.name}} - {{samurai.rate | currency}}
-            </li>
-        </ul>
+    <div class="content">
+        <div ng-controller="SamuraiController">
+            <input type="text" ng-model="search"/>
+            <ul>
+                <li ng-repeat="samurai in samurais | orderBy: '-name' | filter: search" ng-show="samurai.available">
+                    {{samurai.name}} - {{samurai.rate | currency}}
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
