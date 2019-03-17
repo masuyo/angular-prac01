@@ -18,7 +18,8 @@
             <ul>
                 <li ng-repeat="samurai in samurais | orderBy: order | filter: search" ng-show="samurai.available">
                     <h3>{{samurai.name}} - {{samurai.rate | currency}}</h3>
-                    <span>Shogun: {{samurai.lastShogun}}</span>
+                    <div class="remove" ng-click="removeSamurai(samurai)">x</div>
+                    <span class="shogun" style="background: {{samurai.flag}}">{{samurai.lastShogun}}</span>
                 </li>
             </ul>
         </div>
