@@ -12,10 +12,13 @@
     <header ng-include="'header.html'"></header>
     <div class="content">
         <div ng-controller="SamuraiController">
+            <button ng-click="order = 'name'">Order by Name</button>
+            <button ng-click="order = 'lastShogun'">Order by Shogun</button>
             <input type="text" ng-model="search"/>
             <ul>
-                <li ng-repeat="samurai in samurais | orderBy: '-name' | filter: search" ng-show="samurai.available">
-                    {{samurai.name}} - {{samurai.rate | currency}}
+                <li ng-repeat="samurai in samurais | orderBy: order | filter: search" ng-show="samurai.available">
+                    <h3>{{samurai.name}} - {{samurai.rate | currency}}</h3>
+                    <span>Shogun: {{samurai.lastShogun}}</span>
                 </li>
             </ul>
         </div>
